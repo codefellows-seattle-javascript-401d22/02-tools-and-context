@@ -15,10 +15,6 @@ describe('FP Module', function() {
       expect(fp.map).toThrow();
       expect(fp.map).toThrow('Callback not provided');
     });
-    // it.only('should throw an error if collection not provided', function() {
-    //   expect(fp.map).toThrow();
-    //   expect(fp.map).toThrow('Collection not provided');
-    // });
   });
   describe('#filter', function() {
     it('should return filtered array', function() {
@@ -31,6 +27,17 @@ describe('FP Module', function() {
       expect(fp.filter).toThrow();
       expect(fp.filter).toThrow('Callback not provided');
     });
-    // insert collection error here
+  });
+  describe('#reduce', function() {
+    it('should return value of reduced array', function() {
+      var result = fp.reduce([2, 3, 4, 5], function(acc, cur) {
+        return acc + cur;
+      }, 0);
+      expect(result).toEqual(14);
+    });
+    it('should throw an error if callback is not provided', function() {
+      expect(fp.reduce).toThrow();
+      expect(fp.reduce).toThrow('Callback not provided');
+    });
   });
 });
