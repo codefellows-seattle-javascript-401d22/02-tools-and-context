@@ -1,0 +1,15 @@
+{
+  "name": "lab-bessie",
+  "version": "1.0.0",
+  "description": "* In greet.js the single function is export a function that has an airity of 1 and expects a string as its input. If the input is valid, it will return a message saying 'hello [value of input]'. If the input is not valid, it will return null.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
