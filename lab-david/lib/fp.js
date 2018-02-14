@@ -31,8 +31,6 @@ exports.reduce = function(callback, initialState, collection){
 exports.slice = function(begin, end, collection){
     if(!collection) throw new Error('no arguments entered');
     if(Array.isArray(collection) !== true) throw new Error('argument isn\'t an array');
-    if(!begin) throw new Error('no begining index provided');
-    if(!end) throw new Error('no end index provided');
     if(typeof begin !== 'number' && begin !== null) throw new Error('begin index is not a number or null');
     if(typeof end !== 'number' && end !== null) throw new Error('end index is not a number or null');
 
