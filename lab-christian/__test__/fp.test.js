@@ -39,15 +39,15 @@ describe('#reduce', function() {
         expect(result).toEqual(12);
     })
     it('should throw an error if there is no callback', function() {
-        expect(fp,reduce).toThrow();
-        expect(fp,reduce).toThrow('no callback provided');
+        expect(fp.reduce).toThrow();
+        expect(fp.reduce).toThrow('no callback provided');
     })
 })
 
 describe('#slice', function() {
     it('should return a portion of the sliced array', function() {
-        var result = fp.slice(['dogs', 'cats', 'indian food'], 1)
-        expect(resukt).toEqual(['cats', 'indian food']);
+        var result = fp.slice(['dogs', 'cats', 'indian food'], 1, 2)
+        expect(result).toEqual(['cats']);
     })
     it('should throw an error if there is no collection', function() {
         expect(fp.slice).toThrow();
