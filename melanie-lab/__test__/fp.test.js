@@ -40,4 +40,10 @@ describe('FP Module', function() {
       expect(fp.reduce).toThrow('Callback not provided');
     });
   });
+  describe('#slice', function() {
+    it('should return sliced portion of an array between two points', function() {
+      var result = fp.slice([3, 9, 10, 42, 43, 12, 50],1,3);
+      expect(result).toEqual([9, 10]);
+    });
+  });
 });
