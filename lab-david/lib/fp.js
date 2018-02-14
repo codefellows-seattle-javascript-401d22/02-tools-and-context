@@ -23,7 +23,7 @@ exports.reduce = function(callback, initialState, collection){
     if(Array.isArray(collection) !== true) throw new Error('argument isn\'t an array');
     collection.forEach(thing => {if(typeof thing !== 'number') throw new Error('not all values in array are numbers');});
     if(typeof callback !== 'function') throw new Error('callback is not a function');
-    if(!initialState) throw new Error('no initial state entered');
+    if(typeof initialState !== 'number' && initialState !== null) throw new Error('inital state is not a number or null');
 
     return Array.prototype.reduce.apply(collection, [callback, initialState]);
 }
