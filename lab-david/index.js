@@ -21,3 +21,5 @@ console.log('reduce',
 console.log('slice', 
     (fp.slice(1, 4, ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']))
 );
+
+fp.map(n => n * 2, 5);
