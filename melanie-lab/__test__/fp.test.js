@@ -45,5 +45,9 @@ describe('FP Module', function() {
       var result = fp.slice([3, 9, 10, 42, 43, 12, 50],1,3);
       expect(result).toEqual([9, 10]);
     });
+    it('should throw an error if collection is not provided', function() {
+      expect(fp.slice).toThrow();
+      expect(fp.slice).toThrow('Collection not provided');
+    });
   });
 });
