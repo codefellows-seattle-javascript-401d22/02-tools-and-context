@@ -1,0 +1,21 @@
+{
+  "name": "lab-katy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "eslint": "^4.17.0",
+    "jest": "^22.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "lint": "LINT MSG"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
