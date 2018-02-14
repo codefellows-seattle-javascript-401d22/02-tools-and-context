@@ -4,7 +4,7 @@ This module allows you to use certain array methods as functions, rather than ch
 
 ### Map
 
-This function takes two arguments, an array and a callback, runs the callback against each value in the array, and returns an array of the new values.
+The `fp.map` function takes two arguments, an array and a callback, runs the callback against each value in the array, and returns an array of the new values.
 
 ```
 exports.map = function(collection, callback) {
@@ -15,7 +15,7 @@ exports.map = function(collection, callback) {
 
 ### Filter
 
-This function takes two arguments, an array and a callback, runs each item of the array against the callback, and returns an array of the values that coerce to true. 
+The `fp.filter` function takes two arguments, an array and a callback, runs each item of the array against the callback, and returns an array of the values that coerce to true. 
 
 ```
 exports.filter = function(collection, callback) {
@@ -29,7 +29,7 @@ exports.filter = function(collection, callback) {
 
 ### Reduce
 
-This array takes three arguments 
+The `fp.reduce` function takes three arguments 
   - An array
   - a callback
   - and an initial state
@@ -44,7 +44,7 @@ exports.reduce = function(collection, callback, initialState) {
 
 ### Slice
 
-Slice takes three arguments
+`fp.slice` takes three arguments
   - an array
   - a starting index
   - an ending index
