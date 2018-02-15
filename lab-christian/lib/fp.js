@@ -2,22 +2,22 @@
 
 module.exports = exports = {};
 
-exports.map = function(callback, collection) {
+exports.map = function(collection, callback) {
     if (!callback) throw new Error('no callback provided');
-    return Array.prototype.map.call(callback, collection);
+    return Array.prototype.map.call(collection, callback);
 }
 
-exports.filter = function(callback, collection) {
+exports.filter = function(collection, callback) {
     if (!callback) throw new Error('no callback provided');
-    return Array.prototype.filter.call(callback, collection);
+    return Array.prototype.filter.call(collection, callback);
 }
 
-exports.reduce = function(callback, initialState, collection) {
+exports.reduce = function(collection, callback, initialState) {
     if (!callback) throw new Error('no callback provided');
-    return Array.prototype.reduce.call(callback, initialState, collection);
+    return Array.prototype.reduce.call(collection, callback, initialState);
 }
 
-exports.slice = function(begin, end, collection) {
+exports.slice = function(collection, begin, end) {
     if (!collection) throw new Error('no collection provided');
-    return Array.prototype.slice.call(begin, end, collection);
+    return Array.prototype.slice.call(collection, begin, end);
 }
