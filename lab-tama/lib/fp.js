@@ -1,11 +1,5 @@
 'use strict';
 
-// module.exports = exports = {};
-
-// exports.helloWorld = function(greeting) {
-//   console.log(greeting);
-// };
-
 const fp = module.exports = {};
 
 fp.map = (list, callback) => {
@@ -14,13 +8,16 @@ fp.map = (list, callback) => {
 };
 
 fp.filter = (list, callback) => {
+  if(!(list instanceof Array)) throw new Error('please provide an array');
   return Array.prototype.filter.call(list, callback);
 };
 
-fp.reduce = (acc, curr) => {
-  return Array.prototype.reduce.apply(acc, curr);
+fp.reduce = (list, callback, initialState) => {
+  if(!(list instanceof Array)) throw new Error('please provide an array');
+  return Array.prototype.reduce.call(list, callback, initialState);
 };
 
-fp.slice = (begin, end) => {
-  return Array.prototype.slice.apply(begin, end);
+fp.slice = (list, begin, end) => {
+  if (!(typeof begin === 'number' )) throw new Error('please provide a number');
+  return Array.prototype.slice.call(list, begin, end);
 };
